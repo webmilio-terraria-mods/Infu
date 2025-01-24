@@ -3,7 +3,7 @@ param (
     # Template to base file off of
     [Parameter()]
     [string]
-    $Template = './Template.json.ignore',
+    $Template = '.\Templates\Template.json.ignore',
 
     # Armor Name
     [Parameter(Mandatory)]
@@ -17,14 +17,19 @@ param (
 
     # Armor Type
     [Parameter(Mandatory)]
-    [ValidateSet('Cloth', 'Light', 'Heavy')]
-    $Type
+    [ValidateSet('Cloth', 'Light', 'Heavy', 'Universal', 'None')]
+    $Type,
+
+    # Armor item count
+    [Parameter()]
+    [int]
+    $Count = 3
 )
 
 $content = Get-Content -Path $Template
 
-for ($i = $0; $i -le 2; $i++) {
-    $placeholder = 3 - $i
+for ($i = $0; $i -lt $Count; $i++) {
+    $placeholder = $Count - $i
     $id = $StartID + $i
 
     $content = $content.Replace("-00$placeholder", $id)
@@ -33,8 +38,10 @@ for ($i = $0; $i -le 2; $i++) {
 $Type = $Type.ToLower()
 $content = $content.Replace('armor_type', $Type)
 
-$root = [System.IO.Path]::GetDirectoryName($Template)
-$dst = [System.IO.Path]::Combine($root, "$Name.json")
+$makeName = [System.IO.Path]::GetFileNameWithoutExtension($Name)
+$content = $content.Replace('make_name', $makeName)
+
+$dst = "$Name.json"
 
 Write-Output "Outputting to $dst"
 Set-Content -Path $dst -Value $content

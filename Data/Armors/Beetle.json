@@ -1,0 +1,31 @@
+[
+  // Helmet
+  {
+    "id": 2199,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Chestplate
+  // Scale Mail
+  {
+    "id": 2200,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Shell
+  {
+    "id": 2201,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Leggings
+  {
+    "id": 2202,
+    "armor": {
+      "type": "heavy"
+    }
+  }
+]

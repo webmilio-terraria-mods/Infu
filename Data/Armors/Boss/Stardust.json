@@ -1,0 +1,24 @@
+[
+  // I'm not sure what to classify this as, so it'll be like this for now.
+  // Helmet
+  {
+    "id": 3381,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Chestplate
+  {
+    "id": 3382,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Leggings
+  {
+    "id": 3383,
+    "armor": {
+      "type": "light"
+    }
+  }
+]
