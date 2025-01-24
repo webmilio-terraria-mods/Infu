@@ -2,7 +2,8 @@
 
 Infu is a "information database library" that you can use in your projects to figure out what kind of item, npc, projectile, etc. things are.
 The goal is to document everything that is not part of the vanilla game (i.e. what weapon is a fire-type weapon, what NPC is considered a zombie, etc.), 
-but since this is a manual process, completion is not guaranteed. 
+but since this is a manual process, completion is not guaranteed. Information is also subjective, i.e. Wooden armor is light armor but Ebonwood armor is heavy armor.
+I welcome all information contributions or corrections via the form of Pull Requests.
 
 The design of this version revolves around "parts" (see [IPart](https://github.com/webmilio-terraria-mods/Infu/blob/master/IPart.cs) and it's abstract implementation
 [Entry](https://github.com/webmilio-terraria-mods/Infu/blob/master/Entry.cs)) as well as the [PartRegister](https://github.com/webmilio-terraria-mods/Infu/blob/master/PartRegister.cs) and [DataRegister](https://github.com/webmilio-terraria-mods/Infu/blob/master/Data/DataRegister.cs).
@@ -18,8 +19,8 @@ public void SomeFunction(Item item) {
 ```
 
 Although I'm quite sad (and uncertain) about this, I'm not convinced this mod is very efficient/optimized on it's calls. Therefor,
-it's best if you build your own information cache after using this mod. For example, if you want all fire magic weapons to do +10% damage
-with a certain accessory, you would cache this information on load.
+it's best if you build your own information cache after using this mod. For example, if you want armor to reduce movement speed by 10%
+with heavy armor, you would cache this information on load.
 ```cs
     public HashSet<int> heavyArmor = [];
     public void OnLoad()
