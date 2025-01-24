@@ -18,7 +18,7 @@ public void SomeFunction(Item item) {
 }
 ```
 
-Although I'm quite sad (and uncertain) about this, I'm not convinced this mod is very efficient/optimized on it's calls. Therefor,
+Although I'm quite sad (and uncertain) about this, I'm not convinced this mod is very efficient/optimized on it's calls. Therefore,
 it's best if you build your own information cache after using this mod. For example, if you want armor to reduce movement speed by 10%
 with heavy armor, you would cache this information on load.
 ```cs
