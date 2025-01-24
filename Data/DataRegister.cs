@@ -29,38 +29,9 @@ public class DataRegister
         return root.GetParts();
     }
 
-    public IEnumerable<T> GetItemParts<T>(int type) where T : IPart
+    public Root? GetItem(int type)
     {
-        if (!_parts.Reverse<T>(out var key))
-        {
-            return [];
-        }
-
-        if (!TryGetItem(type, out var root))
-        {
-            return [];
-        }
-
-        return root.GetParts<T>(key);
-    }
-
-    public bool TryGetItemParts<T>(int type, out IEnumerable<T> parts) where T : IPart
-    {
-        var mParts = new List<T>();
-        parts = mParts;
-
-        if (!_parts.Reverse<T>(out var key))
-        {
-            return false;
-        }
-
-        if (!TryGetItem(type, out var root))
-        {
-            return false;
-        }
-
-        var local = root.GetParts()
-
+        return TryGetItem(type, out var root) ? root : null;
     }
 
     public bool TryGetItem(int type, out Root root)

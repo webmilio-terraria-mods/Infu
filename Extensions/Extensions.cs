@@ -14,6 +14,6 @@ public static class Extensions
 
     public static IEnumerable<T> GetParts<T>(this Item item) where T : IPart
     {
-        return ModContent.GetInstance<DataRegister>().GetItemParts<T>(item.type);
+        return ModContent.GetInstance<DataRegister>().GetItem(item.type)?.GetParts<T>() ?? [];
     }
 }

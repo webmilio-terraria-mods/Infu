@@ -9,5 +9,5 @@ public interface IPart
     public IEnumerable<IPart> GetParts();
     public IEnumerable<string> GetPartKeys();
 
-    public IEnumerable<IPart>? GetParts(string key);
+    public IEnumerable<IPart> GetParts(string key);
 }

@@ -10,7 +10,7 @@ public static class PartExtensions
     /// <param name="part"></param>
     /// <param name="topLevel"></param>
     /// <returns></returns>
-    public static IEnumerable<T> GetParts<T>(this IPart part, bool topLevel = true) where T : IPart
+    public static IEnumerable<T> GetParts<T>(this IPart part, bool topLevel = false) where T : IPart
     {
         var locals = part.GetParts();
 
@@ -31,6 +31,12 @@ public static class PartExtensions
                 }
             }
         }
+    }
+
+    public static bool TryGetParts<T>(this IPart part, out IEnumerable<T> parts, bool topLevel = false) where T : IPart
+    {
+        parts = GetParts<T>(part, topLevel);
+        return parts.Any();
     }
 
     /// <summary>Determines if provided part contains a part of the specified type. Can be used to search only top-level parts or to recursively search inside of children.</summary>
