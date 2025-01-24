@@ -1,0 +1,46 @@
+[
+  // Scales are lighter than Tissue I guess.
+  // Helmet
+  {
+    "id": 102,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Chestplate
+  {
+    "id": 101,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Leggings
+  {
+    "id": 100,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Ancient
+  // Helmet
+  {
+    "id": 956,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Chestplate
+  {
+    "id": 957,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Leggings
+  {
+    "id": 958,
+    "armor": {
+      "type": "light"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  // Tissue are heavier than Scales I guess
+  // Helmet
+  {
+    "id": 792,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Chestplate
+  {
+    "id": 793,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Leggings
+  {
+    "id": 794,
+    "armor": {
+      "type": "heavy"
+    }
+  }
+]

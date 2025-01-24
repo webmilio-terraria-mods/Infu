@@ -1,0 +1,24 @@
+[
+  // SiO2 g/mol = ~60.086, barely heavier than Iron and lighter than almost everything else so...
+  // Helmet
+  {
+    "id": 3266,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Chestplate
+  {
+    "id": 3267,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Leggings
+  {
+    "id": 3268,
+    "armor": {
+      "type": "light"
+    }
+  }
+]

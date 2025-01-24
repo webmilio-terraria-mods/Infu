@@ -1,0 +1,24 @@
+[
+  // Vines sown together
+  // Helmet
+  {
+    "id": 228,
+    "armor": {
+      "type": "cloth"
+    }
+  },
+  // Chestplate
+  {
+    "id": 229,
+    "armor": {
+      "type": "cloth"
+    }
+  },
+  // Leggings
+  {
+    "id": 230,
+    "armor": {
+      "type": "cloth"
+    }
+  }
+]

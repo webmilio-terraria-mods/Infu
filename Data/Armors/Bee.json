@@ -1,0 +1,23 @@
+[
+  // Helmet
+  {
+    "id": 2361,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Chestplate
+  {
+    "id": 2362,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Leggings
+  {
+    "id": 2363,
+    "armor": {
+      "type": "light"
+    }
+  }
+]

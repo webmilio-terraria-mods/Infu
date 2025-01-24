@@ -1,0 +1,25 @@
+[
+  // Summary research: there are several types of Meteorite fragments. At the point which you get it in the game,
+  // I'm going to assume it's mostly Iron. Iron was marked as light, so I will also mark this one as light.
+  // Helmet
+  {
+    "id": 123,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Chestplate
+  {
+    "id": 124,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Leggings
+  {
+    "id": 125,
+    "armor": {
+      "type": "light"
+    }
+  }
+]

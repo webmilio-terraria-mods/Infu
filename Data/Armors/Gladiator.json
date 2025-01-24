@@ -1,0 +1,25 @@
+[
+  // https://en.wikipedia.org/wiki/Hoplite
+  // The hoplite army [...] their armour [...] was sometimes made of full bronze [...] weighing nearly 32 kilograms (70 lb)
+  // Helmet
+  {
+    "id": 3187,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Chestplate
+  {
+    "id": 3188,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Leggings
+  {
+    "id": 3189,
+    "armor": {
+      "type": "heavy"
+    }
+  }
+]

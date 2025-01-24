@@ -1,0 +1,31 @@
+[
+  // Helmet
+  // Normal
+  {
+    "id": 151,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Ancient
+  {
+    "id": 959,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Chestplate
+  {
+    "id": 152,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Leggings
+  {
+    "id": 153,
+    "armor": {
+      "type": "light"
+    }
+  }
+]
