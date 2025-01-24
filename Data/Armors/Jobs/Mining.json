@@ -1,0 +1,31 @@
+[
+  // Helmet
+  // Mining Helmet
+  {
+    "id": 88,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Ultrabright Helmet
+  {
+    "id": 4008,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Chestplate
+  {
+    "id": 410,
+    "armor": {
+      "type": "cloth"
+    }
+  },
+  // Leggings
+  {
+    "id": 411,
+    "armor": {
+      "type": "cloth"
+    }
+  }
+]

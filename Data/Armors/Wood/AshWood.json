@@ -1,16 +1,19 @@
 [
+  // Helmet
   {
     "id": 924,
     "armor": {
       "type": "heavy"
     }
   },
+  // Chestplate
   {
     "id": 925,
     "armor": {
       "type": "heavy"
     }
   },
+  // Leggings
   {
     "id": 926,
     "armor": {
