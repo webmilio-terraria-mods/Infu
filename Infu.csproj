@@ -7,9 +7,6 @@
 	<PropertyGroup>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
-	<ItemGroup>
-	  <Folder Include="Data\Weapons\" />
-	</ItemGroup>
 
 	<!-- References -->
 

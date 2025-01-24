@@ -1,5 +1,6 @@
 using Infu.Data;
 using Infu.Data.Armors;
+using Infu.Data.Weapons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,5 +49,17 @@ public class Infu : Mod
         }
 
         Logger.Info($"Loaded data for {data.ItemCount} items");
+    }
+
+    public void OnLoad()
+    {
+        var fireMagicWeapons = new HashSet<int>();
+        var parts = ModContent.GetInstance<DataRegister>();
+
+        for (var i = 0; i < ItemLoader.ItemCount; i++)
+        {
+            if (parts.GetItemParts<Magic>(i))
+            fireMagicWeapons.Add(i);
+        }
     }
 }

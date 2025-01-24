@@ -24,6 +24,16 @@ public record Entry : IPart
         wrap.Source.Add(part);
     }
 
+    public IEnumerable<IPart> GetParts()
+    {
+        return _partKeys.Select(x => x.Value.Front).SelectMany(x => x);
+    }
+
+    public IEnumerable<string> GetPartKeys()
+    {
+        return _partKeys.Keys;
+    }
+
     public IEnumerable<IPart> GetParts(string key)
     {
         if (_partKeys.TryGetValue(key, out var parts))
@@ -31,26 +41,10 @@ public record Entry : IPart
             return parts.Front;
         }
 
-        return Enumerable.Empty<IPart>();
+        return [];
     }
 
-    public IEnumerable<T> GetParts<T>(string key) where T : IPart
-    {
-        var parts = GetParts(key);
-
-        foreach (var part in parts)
-        {
-            if (part is T t)
-            {
-                yield return t;
-            }
-        }
-    }
-
-    public IEnumerable<string> GetPartKeys()
-    {
-        return _partKeys.Keys;
-    }
+    private readonly HashSet<int> _fireMagicWeapons = [];
 }
 
 public record Root : Entry
