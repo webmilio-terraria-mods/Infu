@@ -45,7 +45,7 @@ with heavy armor, you would cache this information on load.
     }
 
     // ...
-    // We want to know if we should the player, presumably because he's wearing armor.
+    // We want to know if we should slow the player, presumably because he's wearing armor.
     public bool ShouldSlowPlayer(int itemType)
     {
         return heavyArmor.Contains(itemType);
