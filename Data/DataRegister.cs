@@ -1,7 +1,6 @@
-﻿using Infu.Extensions;
-using log4net;
+﻿using log4net;
 using System.Collections.Generic;
-using System.Linq;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace Infu.Data;
@@ -43,7 +42,21 @@ public class DataRegister
     {
         if (_items.ContainsKey(type))
         {
-            _logger.Error($"Mod {sender.Name} tried registering item type {type} which is already registered, canceling registration.");
+            string name;
+
+            try
+            {
+                var item = new Item(type);
+                name = item.Name;
+
+                item.TurnToAir();
+            }
+            catch
+            {
+                name = "ERR";
+            }
+
+            _logger.Error($"Mod {sender.Name} tried registering item type {type} ({name}) which is already registered, canceling registration.");
             return;
         }
 
