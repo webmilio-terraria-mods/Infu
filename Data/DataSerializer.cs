@@ -13,18 +13,39 @@ public class DataSerializer
     private static readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true,
+        ReadCommentHandling = JsonCommentHandling.Skip,
         Converters = {
             new JsonStringEnumConverter()
         }
     };
 
-    public static IEnumerable<Entry> Process(Mod mod, IEnumerable<string> paths) => paths
-        .Select(x => Deserialize(mod, x)).SelectMany(x => x);
+    public static IEnumerable<Entry> Process(Mod mod, IEnumerable<string> paths)
+    {
+        // paths.Select(x => Deserialize(mod, x)).SelectMany(x => x);
+        var entries = new List<Entry>();
+
+        foreach (var path in paths)
+        {
+            try
+            {
+                var result = Deserialize(mod, path);
+                entries.AddRange(result);
+            }
+            catch (Exception)
+            {
+                mod.Logger.WarnFormat("");
+            }
+        }
+
+        return entries;
+    }
 
     public static List<Entry> Deserialize(Mod mod, string path)
     {
         using var stream = mod.GetFileStream(path);
         var result = new List<Entry>();
+
+        mod.Logger.DebugFormat("Deserializing data file {0}", path);
 
         var entries = Deserialize(stream);
         result.AddRange(entries);

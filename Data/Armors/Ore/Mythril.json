@@ -1,0 +1,37 @@
+[
+  // Helmet
+  {
+    "id": 377,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Hood
+  {
+    "id": 376,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Hat
+  {
+    "id": 378,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Chainmail
+  {
+    "id": 379,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Leggings
+  {
+    "id": 380,
+    "armor": {
+      "type": "heavy"
+    }
+  }
+]

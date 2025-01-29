@@ -1,6 +1,20 @@
 [
   // Helmet
   {
+    "id": 005,
+    "armor": {
+      "type": "armor_type"
+    }
+  },
+  // Mask
+  {
+    "id": 004,
+    "armor": {
+      "type": "armor_type"
+    }
+  },
+  // Hat
+  {
     "id": 003,
     "armor": {
       "type": "armor_type"

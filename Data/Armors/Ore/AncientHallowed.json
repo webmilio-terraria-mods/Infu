@@ -1,0 +1,44 @@
+[
+  // Helmet
+  {
+    "id": 4897,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Mask
+  {
+    "id": 4896,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Headgear
+  {
+    "id": 4898,
+    "armor": {
+      "type": "cloth"
+    }
+  },
+  // Hood
+  {
+    "id": 4899,
+    "armor": {
+      "type": "cloth"
+    }
+  },
+  // Plate Mail
+  {
+    "id": 4900,
+    "armor": {
+      "type": "universal"
+    }
+  },
+  // Greaves
+  {
+    "id": 4901,
+    "armor": {
+      "type": "universal"
+    }
+  }
+]

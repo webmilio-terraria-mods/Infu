@@ -1,0 +1,37 @@
+[
+  // Helmet
+  {
+    "id": 1548,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Mask
+  {
+    "id": 1547,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Headgear
+  {
+    "id": 1546,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Breastplate
+  {
+    "id": 1549,
+    "armor": {
+      "type": "light"
+    }
+  },
+  // Leggings
+  {
+    "id": 1550,
+    "armor": {
+      "type": "light"
+    }
+  }
+]

@@ -1,0 +1,37 @@
+[
+  // Helmet
+  {
+    "id": 1216,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Mask
+  {
+    "id": 1215,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Headgear
+  {
+    "id": 1217,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Breastplate
+  {
+    "id": 1218,
+    "armor": {
+      "type": "heavy"
+    }
+  },
+  // Leggings
+  {
+    "id": 1219,
+    "armor": {
+      "type": "heavy"
+    }
+  }
+]

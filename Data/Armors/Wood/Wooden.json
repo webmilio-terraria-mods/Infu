@@ -3,21 +3,21 @@
   {
     "id": 88,
     "armor": {
-      "type": "clothes"
+      "type": "light"
     }
   },
   // Chestplate
   {
     "id": 728,
     "armor": {
-      "type": "clothes"
+      "type": "light"
     }
   },
   // Leggings
   {
     "id": 729,
     "armor": {
-      "type": "clothes"
+      "type": "light"
     }
   }
 ]
