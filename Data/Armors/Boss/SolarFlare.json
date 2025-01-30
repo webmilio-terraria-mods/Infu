@@ -4,6 +4,9 @@
     "id": 2763,
     "armor": {
       "type": "heavy"
+    },
+    "magic": {
+      "element": "fire"
     }
   },
   // Chestplate
@@ -11,6 +14,9 @@
     "id": 2764,
     "armor": {
       "type": "heavy"
+    },
+    "magic": {
+      "element": "fire"
     }
   },
   // Leggings
@@ -18,6 +24,9 @@
     "id": 2765,
     "armor": {
       "type": "heavy"
+    },
+    "magic": {
+      "element": "fire"
     }
   }
 ]

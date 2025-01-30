@@ -4,6 +4,9 @@
     "id": 3770,
     "armor": {
       "type": "none"
+    },
+    "magic": {
+      "element": "arcane"
     }
   }
 ]

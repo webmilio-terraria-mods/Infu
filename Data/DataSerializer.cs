@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infu.Parts;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,10 +20,10 @@ public class DataSerializer
         }
     };
 
-    public static IEnumerable<Entry> Process(Mod mod, IEnumerable<string> paths)
+    public static IEnumerable<Part> Process(Mod mod, IEnumerable<string> paths)
     {
         // paths.Select(x => Deserialize(mod, x)).SelectMany(x => x);
-        var entries = new List<Entry>();
+        var entries = new List<Part>();
 
         foreach (var path in paths)
         {
@@ -40,10 +41,10 @@ public class DataSerializer
         return entries;
     }
 
-    public static List<Entry> Deserialize(Mod mod, string path)
+    public static List<Part> Deserialize(Mod mod, string path)
     {
         using var stream = mod.GetFileStream(path);
-        var result = new List<Entry>();
+        var result = new List<Part>();
 
         mod.Logger.DebugFormat("Deserializing data file {0}", path);
 
@@ -53,9 +54,9 @@ public class DataSerializer
         return result;
     }
 
-    public static List<Entry> Deserialize(Stream stream)
+    public static List<Part> Deserialize(Stream stream)
     {
-        var entries = new List<Entry>();
+        var entries = new List<Part>();
         var documents = JsonSerializer.Deserialize<JsonDocument[]>(stream, _jsonOptions)!;
 
         foreach (var document in documents)
@@ -71,15 +72,15 @@ public class DataSerializer
         return entries;
     }
 
-    public static Entry? Deserialize(JsonDocument document)
+    public static Part? Deserialize(JsonDocument document)
     {
         var parts = ModContent.GetInstance<PartRegister>();
         return Deserialize(parts, document.RootElement, typeof(Root));
     }
 
-    public static Entry? Deserialize(PartRegister parts, JsonElement element, Type type)
+    public static Part? Deserialize(PartRegister parts, JsonElement element, Type type)
     {
-        var entry = element.Deserialize(type, _jsonOptions) as Entry;
+        var entry = element.Deserialize(type, _jsonOptions) as Part;
         var properties = element.EnumerateObject();
 
         if (entry == null)

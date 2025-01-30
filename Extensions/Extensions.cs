@@ -1,4 +1,5 @@
 ﻿using Infu.Data;
+using Infu.Parts;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;

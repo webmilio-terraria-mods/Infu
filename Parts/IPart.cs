@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Infu;
+namespace Infu.Parts;
 
 public interface IPart
 {

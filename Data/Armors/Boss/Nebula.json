@@ -4,6 +4,9 @@
     "id": 2760,
     "armor": {
       "type": "cloth"
+    },
+    "magic": {
+      "element": "arcane"
     }
   },
   // Chestplate
@@ -11,6 +14,9 @@
     "id": 2761,
     "armor": {
       "type": "cloth"
+    },
+    "magic": {
+      "element": "arcane"
     }
   },
   // Leggings
@@ -18,6 +24,9 @@
     "id": 2762,
     "armor": {
       "type": "cloth"
+    },
+    "magic": {
+      "element": "arcane"
     }
   }
 ]

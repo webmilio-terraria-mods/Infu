@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using Infu.Parts;
+using log4net;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;

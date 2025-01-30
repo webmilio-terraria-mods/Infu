@@ -1,5 +1,4 @@
 ﻿using Infu.Data;
-using Infu.Data.Armors;
 using Infu.Extensions;
 using System;
 using System.Collections.Generic;
@@ -7,13 +6,13 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Terraria.ModLoader;
 
-namespace Infu;
+namespace Infu.Parts;
 
-public record Entry : IPart
+public record Part : IPart
 {
-    private record DictEntry(List<IPart> Source, ReadOnlyCollection<IPart> Front);
+    private record DictPart(List<IPart> Source, ReadOnlyCollection<IPart> Front);
 
-    private readonly Dictionary<string, DictEntry> _partKeys = new(StringComparer.OrdinalIgnoreCase);
+    private readonly Dictionary<string, DictPart> _partKeys = new(StringComparer.OrdinalIgnoreCase);
 
     public void AddPart(string key, IPart part)
     {
@@ -62,7 +61,7 @@ public record Entry : IPart
             }
 
             // topLevel is false since we want to search all parts and their children.
-            if (root.TryGetParts<Armor>(out var armors, topLevel: false) && 
+            if (root.TryGetParts<Armor>(out var armors, topLevel: false) &&
                 armors.Any(a => a.Type.HasFlag(ArmorType.Heavy)))
             {
                 heavyArmor.Add(i);
@@ -78,7 +77,7 @@ public record Entry : IPart
     }
 }
 
-public record Root : Entry
+public record Root : Part
 {
     public int Id { get; init; }
 }
